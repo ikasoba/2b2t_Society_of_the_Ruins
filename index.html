@@ -20,25 +20,5 @@
 			<img style="scroll-snap-align: start;" class="max_size blur_image" src="./images/ruins/0.png">
 		</div>
 	</div>
-	<div class="nanisiteru">
-			<p>このクランは、廃墟の探索などをメインに活動しています</p>
-			<div name="leader">
-				<img class="mcicon" user="ikasoba000">
-			</div>
-	</div>
-
-	<script type="text/javascript">
-		(async()=>{
-			const list=document.querySelectorAll(".mcicon")
-			for (var i=0;i<list.length;i++){
-				const res=await fetch(`https://api.mojang.com/users/profiles/minecraft/${list[i].attributes.user.value}`,{
-					mode:"no-cors"
-				})
-				const {id}=(await res.json())
-				list[i].src=`https://crafatar.com/avatars/${id}`
-
-			}
-		})()
-	</script>
 </body>
 </html>
